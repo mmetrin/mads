@@ -149,7 +149,7 @@ export function usePremiumSlider() {
   }
 
   const handlePointerMove = (event) => {
-    if (!isDragging) {
+    if (!isDraggingRef.current) {
       return
     }
 
@@ -163,13 +163,15 @@ export function usePremiumSlider() {
   }
 
   const handlePointerUp = (event) => {
-    if (!isDragging) {
+    if (!isDraggingRef.current) {
       return
     }
 
     const nextSlide = getSlideFromOffset(dragOffsetRef.current)
 
-    event.currentTarget.releasePointerCapture(event.pointerId)
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
+    }
     updateIsDragging(false)
     updateIsSnapping(true)
     updateAutoProgress(0)

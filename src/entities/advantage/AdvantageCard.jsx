@@ -1,3 +1,5 @@
+import { typographText } from '../../shared/lib/typographText'
+
 export function AdvantageCard({ advantage }) {
   return (
     <article
@@ -7,10 +9,10 @@ export function AdvantageCard({ advantage }) {
       <div className="advantage-card__copy">
         <h2>
           {advantage.title.map((line) => (
-            <span key={line}>{line}</span>
+            <span key={line}>{typographText(line)}</span>
           ))}
         </h2>
-        <p>{advantage.description}</p>
+        <p>{typographText(advantage.description)}</p>
       </div>
       <img
         className={`advantage-card__image ${advantage.imageClassName}`}

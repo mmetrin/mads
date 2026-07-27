@@ -1,5 +1,6 @@
 import onlineTvImage from '../../assets/figma/placement-scenarios/online-tv-img.png'
 import smartVodImage from '../../assets/figma/placement-scenarios/smart-vod-img.png'
+import { typographText } from '../../shared/lib/typographText'
 
 const placementScenarioCards = [
   {
@@ -33,16 +34,16 @@ function PlacementScenarioCard({ card }) {
       <div className="placement-scenarios-section__card-copy">
         <div className="placement-scenarios-section__tags" aria-label="Площадки">
           {card.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
+            <span key={tag}>{typographText(tag)}</span>
           ))}
         </div>
         <div className="placement-scenarios-section__intro">
-          <h3>{card.title}</h3>
-          <p>{card.description}</p>
+          <h3>{typographText(card.title)}</h3>
+          <p>{typographText(card.description)}</p>
         </div>
         <ul className="placement-scenarios-section__features">
           {card.bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
+            <li key={bullet}>{typographText(bullet)}</li>
           ))}
         </ul>
       </div>
@@ -64,9 +65,9 @@ export function PlacementScenariosSection() {
     >
       <div className="placement-scenarios-section__content">
         <h2 id="placement-scenarios-title">
-          Два сценария размещения —
+          {typographText('Два сценария размещения —')}
           <br />
-          под разные задачи кампании
+          {typographText('под разные задачи кампании')}
         </h2>
         <div className="placement-scenarios-section__cards">
           {placementScenarioCards.map((card) => (

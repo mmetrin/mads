@@ -1,3 +1,5 @@
+import { typographText } from '../../shared/lib/typographText'
+
 export function SliderCard({ slide }) {
   return (
     <article className={`slider-card slider-card--${slide.id}`}>
@@ -11,15 +13,18 @@ export function SliderCard({ slide }) {
         />
       ))}
       <div className="slider-card__copy">
-        <h3>{slide.title}</h3>
-        <p>{slide.description}</p>
+        <h3>{typographText(slide.title)}</h3>
+        <p>{typographText(slide.description)}</p>
       </div>
       {slide.button && (
         <a
           className={`premium-video-button slider-card__button ${slide.buttonClassName ?? ''}`}
           href="#lead-form"
+          onPointerDown={(event) => event.stopPropagation()}
+          onPointerMove={(event) => event.stopPropagation()}
+          onPointerUp={(event) => event.stopPropagation()}
         >
-          {slide.button}
+          {typographText(slide.button)}
         </a>
       )}
     </article>

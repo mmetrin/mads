@@ -31,8 +31,7 @@ export function PremiumSliderSection() {
         />
       </div>
       <div
-        className={`slider-section__viewport scroll-reveal${isDragging ? ' is-dragging' : ''}`}
-        style={{ '--reveal-delay': '0.12s' }}
+        className={`slider-section__viewport${isDragging ? ' is-dragging' : ''}`}
         onPointerEnter={() => setIsHovering(true)}
         onPointerLeave={() => setIsHovering(false)}
         onPointerDown={handlePointerDown}

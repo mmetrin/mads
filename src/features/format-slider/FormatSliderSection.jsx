@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 
+import { typographText } from '../../shared/lib/typographText'
 import { formatStateFrames, formatTabs } from './formatSliderData'
 import { useFormatSlider } from './useFormatSlider'
 
@@ -48,7 +49,7 @@ function FormatTabs({
               aria-hidden="true"
             />
           )}
-          <span className="format-slider-section__tab-label">{tab.label}</span>
+          <span className="format-slider-section__tab-label">{typographText(tab.label)}</span>
         </button>
       ))}
     </div>
@@ -64,18 +65,18 @@ function FormatDetails({ stateFrame }) {
     <div className="format-slider-section__details">
       <div className="format-slider-section__eyebrow">
         {stateFrame.eyebrow.map((item) => (
-          <span key={item}>{item}</span>
+          <span key={item}>{typographText(item)}</span>
         ))}
       </div>
       <div className="format-slider-section__copy">
-        <h2>{stateFrame.title}</h2>
+        <h2>{typographText(stateFrame.title)}</h2>
         {descriptionParagraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph}>{typographText(paragraph)}</p>
         ))}
       </div>
       <ul className="format-slider-section__features">
         {stateFrame.bullets.map((bullet) => (
-          <li key={bullet}>{bullet}</li>
+          <li key={bullet}>{typographText(bullet)}</li>
         ))}
       </ul>
     </div>
@@ -252,7 +253,7 @@ export function FormatSliderSection() {
         <div className="format-slider-section__layout">
           <div className="format-slider-section__header">
             <h1 className="format-slider-section__title">
-              Ваша реклама с MTS ADS — больше, чем обычный видеоролик
+              {typographText('Ваша реклама с MTS ADS — больше, чем обычный видеоролик')}
             </h1>
             <a className="premium-video-button format-slider-section__button" href="#lead-form">
               Подобрать формат
