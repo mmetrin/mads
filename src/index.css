@@ -1,0 +1,40 @@
+:root {
+  font-family: 'MTS Text', Arial, sans-serif;
+  color: #ffffff;
+  background: #000814;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background: #000814;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
