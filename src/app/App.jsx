@@ -1,5 +1,10 @@
 import { PremiumVideoPage } from '../pages/premium-video'
+import { PasswordGate } from './PasswordGate'
 
 export function App() {
-  return <PremiumVideoPage />
+  return (
+    <PasswordGate>
+      <PremiumVideoPage />
+    </PasswordGate>
+  )
 }
