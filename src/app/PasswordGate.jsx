@@ -38,10 +38,6 @@ export function PasswordGate({ children }) {
     <main className="password-gate">
       <form className="password-gate__form" onSubmit={handleSubmit}>
         <p className="password-gate__eyebrow">MTS ADS</p>
-        <h1 className="password-gate__title">Закрытая презентация</h1>
-        <p className="password-gate__description">
-          Введите пароль, чтобы посмотреть материалы.
-        </p>
 
         <label className="password-gate__label" htmlFor="access-password">
           Пароль
