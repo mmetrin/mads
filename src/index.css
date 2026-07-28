@@ -1,3 +1,43 @@
+@font-face {
+  font-family: 'MTS Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/MTSText-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MTS Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/MTSText-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MTS Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/MTSText-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MTS Wide';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/MTSWide-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'MTS Wide';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./assets/fonts/MTSWide-Bold.otf') format('opentype');
+}
+
 :root {
   font-family: 'MTS Text', Arial, sans-serif;
   color: #ffffff;
