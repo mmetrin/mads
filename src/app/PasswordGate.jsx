@@ -51,7 +51,6 @@ export function PasswordGate({ children }) {
           autoComplete="off"
           className="password-gate__input"
           id="access-password"
-          maxLength={ACCESS_PASSWORD.length}
           onChange={handlePasswordChange}
           pattern="[A-Z]+"
           required
