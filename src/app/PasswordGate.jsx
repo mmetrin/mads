@@ -37,8 +37,6 @@ export function PasswordGate({ children }) {
   return (
     <main className="password-gate">
       <form className="password-gate__form" onSubmit={handleSubmit}>
-        <p className="password-gate__eyebrow">MTS ADS</p>
-
         <label className="password-gate__label" htmlFor="access-password">
           Пароль
         </label>
