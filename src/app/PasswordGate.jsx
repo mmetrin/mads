@@ -14,7 +14,7 @@ export function PasswordGate({ children }) {
   const [hasError, setHasError] = useState(false)
 
   function handlePasswordChange(event) {
-    setPassword(event.target.value.toUpperCase())
+    setPassword(event.target.value.toUpperCase().replace(/[^A-Z]/g, ''))
     setHasError(false)
   }
 
