@@ -1,13 +1,9 @@
 import { sliderTrack } from './sliderConfig'
-import { getSliderIndex } from './sliderMath'
 import { SliderCard } from './SliderCard.jsx'
-import { SliderPagination } from './SliderPagination.jsx'
 import { usePremiumSlider } from './usePremiumSlider'
 
 export function PremiumSliderSection() {
   const {
-    activeSlide,
-    autoProgress,
     isDragging,
     isSnapping,
     trackOffset,
@@ -25,10 +21,6 @@ export function PremiumSliderSection() {
     >
       <div className="slider-section__header scroll-reveal">
         <h2>MTS ADS Premium Video</h2>
-        <SliderPagination
-          activeSlide={getSliderIndex(activeSlide)}
-          progress={isDragging ? 0 : autoProgress}
-        />
       </div>
       <div
         className={`slider-section__viewport${isDragging ? ' is-dragging' : ''}`}

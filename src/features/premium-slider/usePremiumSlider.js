@@ -184,8 +184,6 @@ export function usePremiumSlider() {
     : activeSlide * sliderStep
 
   return {
-    activeSlide,
-    autoProgress,
     isDragging,
     isSnapping,
     trackOffset,

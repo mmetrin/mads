@@ -6,10 +6,6 @@ import {
   sliderTrackCopies,
 } from './sliderConfig'
 
-export function interpolateValue(start, end, progress) {
-  return start + (end - start) * progress
-}
-
 export function getSliderIndex(slideIndex) {
   return ((slideIndex % sliderSlides.length) + sliderSlides.length) % sliderSlides.length
 }
